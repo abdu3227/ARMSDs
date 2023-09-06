@@ -1,0 +1,138 @@
+<Auth>:
+    BoxLayout:
+        orientaion: "vertical"
+        spacing: dp(24)
+        padding: dp(24)
+        canvas.before:
+            Color:
+                rgba: [1, 1, 1, 1]
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: "assets/imgs/bg-login.png "
+        AnchorLayout:
+            BoxLayout:
+                orientation: "vertical"
+                size_hint_y: .7
+                size_hint_x: .8
+                AnchorLayout:
+                    anchor_y: 'bottom'
+                    Image:
+                        source: "assets/imgs/logo-light.png"
+
+                BoxLayout:
+                    orientation: "vertical"
+                    spacing: dp(24)
+
+                    Text:
+                        text: "Rental Management System"
+                        font_name: app.fonts.heading
+                        font_size: app.fonts.size.h1
+                        color: app.color_primary_text
+                        halign: "center"
+                        valign: "bottom"
+                        #size_hint_y: None
+                        #height: dp(54)
+                    AnchorLayout:
+                        anchor_y: "top"
+                        Label:
+                            text: "An All In One, Simple yet feature rich \n solution for your business"
+                            ext_size: [self.parent.width, None]
+                            font_name: app.fonts.body
+                            font_size: app.fonts.size.h3
+                            size: self.texture_size
+                            color: app.color_primary_text
+                            halign: "center"
+                            valign: "top"
+                            size_hint_y: None
+                            height: dp(54)
+
+    BoxLayout:
+        orientation: "vertical"
+        spacing: dp(12)
+        BoxLayout:
+            orientation: "vertical"
+            spacing: dp(12)
+            size_hint_y: .3
+            Text:
+                text: "A&D's RMS"
+                font_name: app.fonts.styled
+                font_size: app.fonts.size.extra
+                color: app.color_primary_text
+                halign: "center"
+                valign: "bottom"
+            AnchorLayout:
+                anchor_y: "top"
+                Label:
+                    text: "Enter your details to sign in and access the system"
+                    text_size: [self.parent.width, None]
+                    font_name: app.fonts.body
+                    font_size: app.fonts.size.h4
+                    size: self.texture_size
+                    color: app.color_secondary_text
+                    halign: "center"
+                    valign: "top"
+                    size_hint_y: None
+        AnchorLayout:
+            size_hint_y: .5
+            BoxLayout:
+                orientation: "vertical"
+                spacing: dp(24)
+                padding: (24)
+                size_hint_x: .7
+                BackBox:
+                    size_hint_y: None
+                    height: dp(54)
+                    bcolor: app.color_secondary_bg
+                    radius: [self.height*.1]
+                    padding: [dp(12), dp(2)]
+                    FlatField:
+                        hint_text: "username"
+                        hint_text_color: app.color_primary_text
+                        font_size: app.fonts.size.h3
+                        multiline: False
+                BackBox:
+                    size_hint_y: None
+                    height: dp(54)
+                    bcolor: app.color_secondary_bg
+                    radius: [self.height*.1]
+                    padding: [dp(12), dp(2)]
+                    FlatField:
+                        hint_text: "Password"
+                        hint_text_color: app.color_primary_text
+                        font_size: app.fonts.size.h3
+                        password: True
+                        multiline: False
+                BackBox:
+                    size_hint_y: None
+                    height: dp(54)
+                    RoundedButton:
+                        text: "Sing in"
+                        font_name: app.fonts.heading
+                        font_size: app.fonts.size.h4
+                        bcolor: app.color_primary
+                        radius: [self.height*.1]
+                        on_release: root.authenticate()
+                BackBox:
+                    size_hint_y: None
+                    height: dp(54)
+                    FlatButton:
+                        text: "Don't have account"
+                        font_name: app.fonts.subheading
+                        font_size: app.fonts.size.h4
+                        color: app.color_primary_text
+                        radius: [self.height*.1]
+                Widget:
+        AnchorLayout:
+            padding: dp(24)
+            size_hint_y: .2
+            Text:
+                text: "V0.01"
+                font_size: app.fonts.size.h4
+                valign: "bottom"
+                halign: "center"
+                color: app.color_primary_text
+
+
+
+
